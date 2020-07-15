@@ -1,0 +1,80 @@
+FID,Name,Title,Location,Artist,Medium,X,Y
+0,DG010,R.H. Herb Gray Bust,Dieppe Gardens, ,Bronze,-83.040476969200000,42.320200965500000
+1,DG009,Dieppe Gardens Plaque,Dieppe Gardens, ,Bronze,-83.043152098600004,42.319243745199998
+2,DG008,Eternal Flame,Dieppe Gardens, ,Granite,-83.043165100300001,42.319270530399997
+3,DG007,Navy and Merchant Navy Memorial,Dieppe Gardens, ,Granite,-83.042297819900000,42.319844334800003
+4,DG006,Service Personnel Monument,Dieppe Gardens, , ,-83.043258151900005,42.319521029000001
+5,DG005,Dieppe Red Beach Memorial,Dieppe Gardens,Rory O'Connor,Granite,-83.043231565599996,42.319449458000001
+6,DG004,Cairn to Pipe Major J. Copeland,Dieppe Gardens, ,Bronze,-83.043131920999997,42.319370183600000
+7,DG003,Royal Canadian Air Force Memorial,Dieppe Gardens,Laura and Mark Williams, ,-83.043780123700003,42.319151498499998
+8,DG002,Knights of Columbus Peace Monument,Dieppe Gardens, , ,-83.043921688899999,42.319401131600003
+9,DG001,Korean War Veterans Memorial Wall,Dieppe Gardens, ,Granite,-83.044119702499998,42.319145443200000
+10,JP009,Monument of Memories,Jackson Park, , ,-83.023933208900004,42.295476592000000
+11,JP008,Sea,Jackson Park, , ,-83.022604263600002,42.295265900499999
+12,JP007,Land,Jackson Park, , ,-83.022616386999999,42.295265686599997
+13,JP006,Air,Jackson Park, , ,-83.022628222300000,42.295256472100000
+14,JP005,Robert Burns Bust,Jackson Park, ,Bronze,-83.021905426900005,42.295413313700003
+15,JP004,Royal Canadian Air Force Memorial,Jackson Park, , ,-83.022305548099993,42.294649779899999
+16,JP003,Holodomor Monument,Jackson Park, ,Granite,-83.023602433500002,42.294996125799997
+17,JP002,Copernicus Astrolabium and Sundial,Jackson Park, ,Bronze,-83.023398048700003,42.295432005400002
+18,JP001,South African War Memorial,Jackson Park, , ,-83.022616675099997,42.295274687199999
+19,RP008,Charles Brooks Memorial Peace Fountain,Reaume Park/Coventry Gardens, , ,-82.978476174099995,42.330176467800001
+20,RP007,Anne,Reaume Park/Coventry Gardens,Leo Mol,Bronze,-82.977787843499996,42.329900166400002
+21,RP006,""Fight for the Living"",Reaume Park/Coventry Gardens, , ,-82.978781681800001,42.329468754200001
+22,RP005,Afganistan,Reaume Park/Coventry Gardens, ,Granite,-82.980855375700003,42.329027682700001
+23,RP004,Peacekeepers,Reaume Park/Coventry Gardens, ,Granite,-82.980855375700003,42.329027682700001
+24,RP003,Bird Bath II,Reaume Park/Coventry Gardens,Unknown,Bronze,-82.979618378500007,42.329058058800001
+25,RP002,Bird Bath I,Reaume Park/Coventry Gardens,Unknown,Bronze,-82.979616966899997,42.329013054999997
+26,RP001,Sisters,Reaume Park/Coventry Gardens,Morton Katz,Black Finished Steel,-82.979123862899996,42.329156654800002
+27,WIN004,Noon Mark,Albert Weeks Memorial Garden, , ,-83.026125106199999,42.323346357699997
+28,WIN003,Albert Howard Weeks Bust,Albert Weeks Memorial Garden, , ,-83.026484634400006,42.323204917600002
+29,WIN002,Four Generations,Ford City Parkette (Whelpton Park)  at Drouillard Rd. and Whelpton St.,Mark Williams,Bronze,-83.000414735299998,42.321591558500003
+30,WIN001,Guitar Man,"Sandwich Public Library, 3312 Sandwich St., Windsor, Ont.",Al Green,Bronze,-83.077357030399995,42.299600073900002
+31,CH007,Unknown,City Hall, ,Bronze,-83.034976979899994,42.317101745000002
+32,CH005,City Hall Square Fountains,City Hall, ,Granite,-83.035155236799994,42.317737979699999
+33,CH004,Neighbours,City Hall,Leo Rosenthal,Bronze,-83.035814833600000,42.318248593000000
+34,CH003,Space Composition,City Hall,Hadyn Davies,Painted Steel,-83.035756288599998,42.318690908400001
+35,CH002,Tempo,City Hall,Ronald Zerafa,Granite,-83.036035907900001,42.317578249999997
+36,CH001,Inukshuk,City Hall,Matt Beasley and Paulette Hunt,Granite,-83.035696625900002,42.317593281699999
+37,VC005,Trees,Vision Corridor,Leo Rosenthal,Welded Copper,-83.044921361799993,42.318419700200003
+38,VC004,Tryptych,Vision Corridor,Gord Smith,Bronze,-83.045061937400007,42.318264096599997
+39,VC003,Lady,Vision Corridor,Leo Rosenthal,Bronze,-83.045247350899999,42.318368855899998
+40,VC002,Three Fates,Vision Corridor,Morton Katz,Painted steel Poles with Bronze Figures,-83.045428974100005,42.318356609399999
+41,VC001,Ribbon of Friendship,Vision Corridor,Xiaofeng Yin,Painted Steel,-83.044977509800006,42.317905378100001
+42,SP037,Consophia,Sculpture Park,Ian Lazarus,Painted Steel w/ Stainless Steel Chain,-83.046507585900002,42.318688576000000
+43,SP036,Cordella,Sculpture Park,Maryon Kantaroff,Cast Aluminum,-83.051426141199997,42.317691086499998
+44,SP035,Obelisk,Sculpture Park,Sigmund Reszetnick,Painted Steel,-83.051786162900001,42.317567569500000
+45,SP034,Claim Post,Sculpture Park,Scott Mckay,Painted Stainless Steel,-83.052893108199996,42.317277581200003
+46,SP033,Inukshuk,Sculpture Park, ,Limestone,-83.053138290199996,42.317354240299998
+47,SP032,The Columns,Sculpture Park,Ronald Zerafa,Grey Concrete,-83.056680684300005,42.316210060400003
+48,SP031,Businessman on a Horse,Sculpture Park,William McElcheran,Bronze,-83.057148951200006,42.316057567500003
+49,SP030,From Ground to Ask the Sky,Sculpture Park,Royden Mills,Steel,-83.057778094699998,42.316001246500001
+50,SP029,Racing Horses,Sculpture Park,Stephan Derrick Hudson,Bronze,-83.058110905600003,42.315788142099997
+51,SP028,Tower Song,Sculpture Park,Ted Bieler,Cast Aluminum,-83.058507577300006,42.315672951700002
+52,SP027,Audio Corridor,Sculpture Park,Ian Lazarus,Stainless Steel,-83.059375966299996,42.312163173199998
+53,SP026,Century Rock,Sculpture Park, , ,-83.061142908899996,42.314625970700000
+54,SP025,Chicken and Egg,Sculpture Park,Morton Katz,Painted Steel Frame and Marble Egg,-83.061661716900005,42.314535589899997
+55,SP024,Tohawah,Sculpture Park,Anne Harris,Painted Steel,-83.061880075600001,42.314162432000003
+56,SP023,Tembo,Sculpture Park,Stephan Derrick,Bronze,-83.062236159899996,42.314291110399999
+57,SP022,Billy Goat Spring,Sculpture Park,Leszek Rumczuk,Bronze,-83.062463628100005,42.314196961599997
+58,SP021,Morning Flight,Sculpture Park,Gerald Gladstone,Painted Plate Steel,-83.063109942599993,42.313924167600000
+59,SP020,Rinterzo,Sculpture Park,Joe DeAngelis,Terrazzo,-83.063331820000002,42.313659010999999
+60,SP019,Penguins on a Waterfall,Sculpture Park,Yolanda Vandergaast,Painted Aluminum,-83.063683851999997,42.313292448900000
+61,SP018,Eve's Apple,Sculpture Park,Edwina Sandys,Painted Steel,-83.064213300500001,42.313156837000001
+62,SP017,Salutations,Sculpture Park,Ralph Hicks,Stainless Steel,-83.064515114499997,42.312367912699997
+63,SP016,Flying Men,Sculpture Park,Dame Elisabeth Frink,Bronze,-83.065237045600000,42.312553031299998
+64,SP015,The Garden,Sculpture Park,Maryon Kantaroff,Bronze,-83.065756713499994,42.312489633399998
+65,SP014,Union Six,Sculpture Park,Bruce Watson,Bronze,-83.066139161799995,42.312311633599997
+66,SP013,A Butterfly's Wings,Sculpture Park,Brain Injury Association,Bronze and Granite (?),-83.066391753100007,42.312244041000000
+67,SP012,Consolation,Sculpture Park,Leo Rosenthal,Bronze,-83.066679839000003,42.312148790999998
+68,SP011,Bell Measure,Sculpture Park,Stephan Cruise,White Oak and Bronze,-83.067704470799995,42.311202733800002
+69,SP010,King and Queen,Sculpture Park,Sorel Etrog,Painted Steel,-83.068891354599998,42.311136289600000
+70,SP009,Voyageur Canoe,Sculpture Park,Ralph Ireland,Basswood,-83.069241570599999,42.310715709599997
+71,SP008,Canadian Vietnam Veterans Memorial,Sculpture Park, ,Granite,-83.069740537900003,42.310391504400002
+72,SP007,Dancing Bear,Sculpture Park,Pauta Saila,Bronze,-83.070527865100004,42.309981038200000
+73,SP006,Sisters II,Sculpture Park,Morton Katz,Black Finished Steel,-83.070991081399995,42.308937023900000
+74,SP005,Sinclair Oil Apatosaurus,Sculpture Park, ,Fibreglass,-83.070657117799996,42.309852624700000
+75,SP004,Tiger Business,Sculpture Park,A. Duquette,Painted steel buoy and bronze head,-83.070932765199998,42.309748583100003
+76,SP003,Triceratops,Sculpture Park, ,Fibreglass,-83.071135656799996,42.309645855500001
+77,SP002,Space Plough II,Sculpture Park,Sorel Etrog,Painted Steel,-83.071029500400002,42.309368599400003
+78,SP001,Composition with Five Elements,Sculpture Park,Hadyn Davies,Painted Aluminum,-83.071896037499997,42.309524046500002
