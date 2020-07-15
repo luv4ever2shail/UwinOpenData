@@ -22,7 +22,7 @@ namespace UwinOpenDMT
         public UwinOpenDMT()
         {
             InitializeComponent();
-            enableCtrl(false); // Disable control since no xml doc is loaded
+            EnableCtrl(false); // Disable control since no xml doc is loaded
             this.Visible = true; // Make the form visible
         }
 
@@ -30,14 +30,14 @@ namespace UwinOpenDMT
 
         #region Functions and Methods
 
-        private void enableCtrl(bool status)
+        private void EnableCtrl(bool status)
         {
             readOnly.Enabled = status;
             readOnlyToolStripMenuItem.Enabled = status;
             saveCurrent.Enabled = !readOnly.Checked;
         }
 
-        private void openFile()
+        private void OpenFile()
         {
             using (var openFileDialog = new OpenFileDialog())
             {
@@ -55,9 +55,9 @@ namespace UwinOpenDMT
                             // Load the contents of the file into dataGrid
                             openedDocument = openFileDialog.OpenFile();
                             dataGrid.DataSource = (Path.GetExtension(openFileDialog.FileName)?.ToLower() == ".xml")
-                                ? ImpExpUtilities.getXmlData(openedDocument).Tables[0] // if it's an xml document
-                                : ImpExpUtilities.getSpreadSheetData(openedDocument as FileStream).Tables[0]; // else if (xlsx|xls|csv)
-                            enableCtrl(true);
+                                ? ImpExpUtilities.GetXmlData(openedDocument).Tables[0] // if it's an xml document
+                                : ImpExpUtilities.GetSpreadSheetData(openedDocument as FileStream).Tables[0]; // else if (xlsx|xls|csv)
+                            EnableCtrl(true);
 
                             currentOpenDocumentPath = openFileDialog.FileName;
                             this.Text = Resources.title + '[' + openFileDialog.SafeFileName + ']'; // Change the Forms title to currentOpenDoc #10
@@ -80,7 +80,7 @@ namespace UwinOpenDMT
             }
         }
 
-        private void saveFile()
+        private void SaveFile()
         {
             if (currentOpenDocumentPath != String.Empty)
             {
@@ -112,13 +112,13 @@ namespace UwinOpenDMT
                     MessageBox.Show(Resources.saveXml_fail_msg, Resources.fail, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else if (newDocument || currentOpenDocumentPath == String.Empty)
+            else if (newDocument || currentOpenDocumentPath?.Length == 0)
             {
-                exportFile();
+                ExportFile();
             }
         }
 
-        private void exportFile()
+        private void ExportFile()
         {
             if (dataGrid.ColumnCount > 0)
             {
@@ -154,7 +154,9 @@ namespace UwinOpenDMT
                             MessageBox.Show(Resources.saveCurrent_success + currentOpenDocumentPath, Resources.success, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         }
                         else
+                        {
                             MessageBox.Show(string.Format(Resources.saveFile_fail_msg, fileDialog.FileName), Resources.fail, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
@@ -164,7 +166,7 @@ namespace UwinOpenDMT
             }
         }
 
-        private void exportXmlFile()
+        private void ExportXmlFile()
         {
             if (dataGrid.ColumnCount > 0)
             {
@@ -193,7 +195,7 @@ namespace UwinOpenDMT
             }
         }
 
-        private void exportXlsFile()
+        private void ExportXlsFile()
         {
             if (dataGrid.ColumnCount > 0)
             {
@@ -220,7 +222,7 @@ namespace UwinOpenDMT
             }
         }
 
-        private void exportCSVFile()
+        private void ExportCSVFile()
         {
             if (dataGrid.ColumnCount > 0)
             {
@@ -247,7 +249,7 @@ namespace UwinOpenDMT
             }
         }
 
-        private void openXlsFile()
+        private void OpenXlsFile()
         {
             using (var openFileDialog = new OpenFileDialog())
             {
@@ -265,8 +267,8 @@ namespace UwinOpenDMT
                         {
                             // Load the contents of the file into dataGrid
                             xlsSheet = openFileDialog.OpenFile();
-                            dataGrid.DataSource = ImpExpUtilities.getSpreadSheetData(xlsSheet as FileStream).Tables[0];
-                            enableCtrl(true);
+                            dataGrid.DataSource = ImpExpUtilities.GetSpreadSheetData(xlsSheet as FileStream).Tables[0];
+                            EnableCtrl(true);
                             this.Text = Resources.title + '[' + openFileDialog.SafeFileName + ']'; // Change the Forms title to currentOpenDoc #10
                         }
                         catch (Exception)
@@ -334,7 +336,7 @@ namespace UwinOpenDMT
 
         #region Buttons & Controls
 
-        private void readOnly_CheckedChanged(object sender, EventArgs e)
+        private void ReadOnly_CheckedChanged(object sender, EventArgs e)
         {
             if (newDocument || currentOpenDocumentPath != String.Empty)
             {
@@ -344,31 +346,31 @@ namespace UwinOpenDMT
             }
         }
 
-        private void readOnly_CheckStateChanged(object sender, EventArgs e)
+        private void ReadOnly_CheckStateChanged(object sender, EventArgs e)
         {
             readOnlyToolStripMenuItem.CheckState = readOnly.CheckState;
         }
 
-        private void saveCurrent_Click(object sender, EventArgs e)
+        private void SaveCurrent_Click(object sender, EventArgs e)
         {
-            saveFile();
+            SaveFile();
         }
 
         #endregion Buttons & Controls
 
         #region Menu
 
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openFile();
+            OpenFile();
         }
 
-        private void excelSheetToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExcelSheetToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openXlsFile();
+            OpenXlsFile();
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var exit = MessageBox.Show(Resources.quit_msg, Resources.exit, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (exit == DialogResult.Yes)
@@ -377,43 +379,43 @@ namespace UwinOpenDMT
             }
         }
 
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFile();
+            SaveFile();
         }
 
-        private void exportToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fileToolStripMenuItem.HideDropDown();
-            exportFile();
+            ExportFile();
         }
 
-        private void toXMLDocumentToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToXMLDocumentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            exportXmlFile();
+            ExportXmlFile();
         }
 
-        private void toXLSXExcelSheetToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToXLSXExcelSheetToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            exportXlsFile();
+            ExportXlsFile();
         }
 
-        private void toCSVToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ToCSVToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            exportCSVFile();
+            ExportCSVFile();
         }
 
-        private void editToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
+        private void EditToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
         {
-            readOnly_CheckedChanged(sender, e);
+            ReadOnly_CheckedChanged(sender, e);
         }
 
-        private void readOnlyToolStripMenuItem_CheckStateChanged(object sender, EventArgs e)
+        private void ReadOnlyToolStripMenuItem_CheckStateChanged(object sender, EventArgs e)
         {
             readOnly.CheckState = readOnlyToolStripMenuItem.CheckState;
         }
 
-        private void infoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void InfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Process.Start("https://github.com/luv4ever2shail/UwinOpenData"); // Opens repo's homepage
         }
@@ -422,12 +424,12 @@ namespace UwinOpenDMT
 
         #region Drag&Drop Event
 
-        private void xmlDataGrid_DragEnter(object sender, DragEventArgs e)
+        private void XmlDataGrid_DragEnter(object sender, DragEventArgs e)
         {
             e.Effect = e.Data.GetDataPresent(DataFormats.FileDrop) ? DragDropEffects.All : DragDropEffects.None;
         }
 
-        private void xmlDataGrid_DragDrop(object sender, DragEventArgs e)
+        private void XmlDataGrid_DragDrop(object sender, DragEventArgs e)
         {
             var droppedDocumentPath = (string[])e.Data.GetData(DataFormats.FileDrop, false);
             if (droppedDocumentPath.Length > 1) MessageBox.Show(Resources.DragDrop_many_msg, Resources.warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -439,9 +441,9 @@ namespace UwinOpenDMT
                     // Load the contents of the file into dataGrid
                     droppedDocument = new FileStream(droppedDocumentPath[0], FileMode.Open, FileAccess.Read); // [0] => the first selected file
                     dataGrid.DataSource = (Path.GetExtension(droppedDocumentPath[0])?.ToLower() == ".xml")
-                        ? ImpExpUtilities.getXmlData(droppedDocument).Tables[0] // if it's an xml document
-                        : ImpExpUtilities.getSpreadSheetData(droppedDocument).Tables[0]; // else if (xlsx|xls|csv)
-                    enableCtrl(true);
+                        ? ImpExpUtilities.GetXmlData(droppedDocument).Tables[0] // if it's an xml document
+                        : ImpExpUtilities.GetSpreadSheetData(droppedDocument).Tables[0]; // else if (xlsx|xls|csv)
+                    EnableCtrl(true);
                     currentOpenDocumentPath = (Path.GetExtension(droppedDocumentPath[0])?.ToLower() == ".xml") ? droppedDocumentPath[0] : String.Empty; // Set the currentOpenPath variable to be used later for saving
                     this.Text = Resources.title + '[' + Path.GetFileName(droppedDocumentPath[0]) + ']'; // Change the Forms title to currentOpenDoc #10
                 }

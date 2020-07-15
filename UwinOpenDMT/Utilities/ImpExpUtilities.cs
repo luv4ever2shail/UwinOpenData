@@ -12,14 +12,14 @@ namespace UwinOpenDMT
 {
     public static class ImpExpUtilities
     {
-        public static DataSet getXmlData(Stream xmlDoc)
+        public static DataSet GetXmlData(Stream xmlDoc)
         {
             var xmlData = new DataSet();
             xmlData.ReadXml(xmlDoc);
             return xmlData;
         }
 
-        public static DataSet getSpreadSheetData(FileStream excelSheet)
+        public static DataSet GetSpreadSheetData(FileStream excelSheet)
         {
             DataSet spreadSheet;
             using (IExcelDataReader excelReader = (Path.GetExtension(excelSheet.Name)?.ToLower() != ".csv")
@@ -37,7 +37,7 @@ namespace UwinOpenDMT
 
         public static bool ExportXML(DataTable xmlData, String xmlDocPath)
         {
-            var flag = false;
+            bool flag;
             try
             {
                 xmlData.WriteXml(xmlDocPath);
@@ -53,22 +53,9 @@ namespace UwinOpenDMT
         public static bool ExportCSV(DataGridView dgv, string filename)
         {
             var flag = false;
-            /*// Method 1
-            dgv.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText; // Choose whether to write header. Use EnableWithoutHeaderText instead to omit header.
-            dgv.SelectAll(); // Select all the cell
-            DataObject dataObject = dgv.GetClipboardContent(); // Copy selected cells to DataObject
-            if (dataObject != null)
-            {
-                // Get the text of the DataObject, and serialize it to a file
-                File.WriteAllText(filename, dataObject.GetText(TextDataFormat.CommaSeparatedValue));
-                pass = true;
-            }*/
-
-            // Method 2
-
             var sb = new StringBuilder();
             var headers = dgv.Columns.Cast<DataGridViewColumn>();
-            sb.AppendLine(string.Join(",", headers.Select(column => "\"" + SecurityElement.Escape(column.HeaderText.ToString()) + "\"").ToArray()));
+            sb.AppendLine(string.Join(",", headers.Select(column => "\"" + SecurityElement.Escape(column.HeaderText) + "\"").ToArray()));
 
             foreach (DataGridViewRow row in dgv.Rows)
             {
@@ -92,7 +79,6 @@ namespace UwinOpenDMT
         public static bool ExportXLS(DataTable xlsData, string filename)
         {
             var xlsWorkbook = new XLWorkbook();
-            // Add the data table to the xls sheet
             xlsWorkbook.Worksheets.Add(xlsData, xlsData.TableName);
             bool flag;
             try
