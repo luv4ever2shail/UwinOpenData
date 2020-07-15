@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,91 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="csvfile_extension" xml:space="preserve">
+    <value>CSV Excel Sheets (*.csv)|*.csv</value>
+  </data>
+  <data name="DragDrop_many_msg" xml:space="preserve">
+    <value>Many files were dropped!
+Only the first selected will be opened.</value>
+  </data>
+  <data name="DragDrop_wrongExt_msg" xml:space="preserve">
+    <value>The dropped file is not an XML Document nor an Excel Sheet !</value>
+  </data>
+  <data name="exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="exit_msg" xml:space="preserve">
+    <value>Are you sure you want to close this window ?
+Unsaved progress might be lost !</value>
+  </data>
+  <data name="fail" xml:space="preserve">
+    <value>Failure</value>
+  </data>
+  <data name="ImportTable_noColumns_msg" xml:space="preserve">
+    <value>Cannot create a document from without specifying a database table !</value>
+  </data>
+  <data name="OpenDoc_fail_msg" xml:space="preserve">
+    <value>Could not open selected file !
+Please make sure the selected file is a simple valid XML Document / Excel Sheet.</value>
+  </data>
+  <data name="OpenXlsSheet_fail_msg" xml:space="preserve">
+    <value>Could not open selected file !
+Please make sure the selected file is a valid Excel Sheet.</value>
+  </data>
+  <data name="quit_msg" xml:space="preserve">
+    <value>Are you sure you want to exit all opened windows ?
+Unsaved progress might be lost !</value>
+  </data>
+  <data name="saveCSV_fail_msg" xml:space="preserve">
+    <value>Couldn't export to CSV file !</value>
+  </data>
+  <data name="saveCurrent_success" xml:space="preserve">
+    <value>File successfully saved to</value>
+  </data>
+  <data name="saveEmptyTable_fail_msg" xml:space="preserve">
+    <value>Can't export an empty table !
+Please create a new document using "File &gt; New (Ctrl + N)" or open an existing one !</value>
+  </data>
+  <data name="saveFile_fail_msg" xml:space="preserve">
+    <value>Couldn't save data to {0} !</value>
+  </data>
+  <data name="saveXls_fail_msg" xml:space="preserve">
+    <value>Couldn't export to Excel Sheet xls file !</value>
+  </data>
+  <data name="saveXml_fail_msg" xml:space="preserve">
+    <value>Can't save while on read only mode !
+Disable read only mode and try again.</value>
+  </data>
+  <data name="success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="supportedFiles_extension" xml:space="preserve">
+    <value>XML file (*.xml)|*.xml|Excel xlsx Sheet (*.xlsx)|*.xlsx|Excel xls (97-2003) sheet (*.xls)|*.xls|CSV Excel Sheet (*.csv)|*.csv</value>
+  </data>
+  <data name="supportedfiles_opendialogExtension" xml:space="preserve">
+    <value>XML Documents / Excel Tables|*.xml;*.xlsx;*.xls;*.csv|XML files (*.xml)|*.xml|Excel xlsx Sheets (*.xlsx)|*.xlsx|Excel xls (97-2003) sheets (*.xls)|*.xls|CSV Excel Sheets (*.csv)|*.csv|All files (*.*)|*.*</value>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>UwinOpenDMT -</value>
+  </data>
+  <data name="Unsaved_new_title" xml:space="preserve">
+    <value>[Unsaved - {0}]</value>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="xlsfile_dialogextension" xml:space="preserve">
+    <value>Excel xlsx Sheets (*.xlsx)|*.xlsx|Excel xls (97-2003) sheets (*.xls)|*.xls|CSV Excel Sheets (*.csv)|*.csv|All files (*.*)|*.*</value>
+  </data>
+  <data name="xlsfile_extention" xml:space="preserve">
+    <value>Excel Sheets (*.xlsx)|*.xlsx</value>
+  </data>
+  <data name="xmlfile_dialogextension" xml:space="preserve">
+    <value>XML files (*.xml)|*.xml|All files (*.*)|*.*</value>
+  </data>
 </root>

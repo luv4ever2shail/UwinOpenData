@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UwinOpenDMT.Properties
-{
-
-
+namespace UwinOpenDMT.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -19,52 +19,276 @@ namespace UwinOpenDMT.Properties
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("UwinOpenDMT.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CSV Excel Sheets (*.csv)|*.csv.
+        /// </summary>
+        internal static string csvfile_extension {
+            get {
+                return ResourceManager.GetString("csvfile_extension", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Many files were dropped!
+        ///Only the first selected will be opened..
+        /// </summary>
+        internal static string DragDrop_many_msg {
+            get {
+                return ResourceManager.GetString("DragDrop_many_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The dropped file is not an XML Document nor an Excel Sheet !.
+        /// </summary>
+        internal static string DragDrop_wrongExt_msg {
+            get {
+                return ResourceManager.GetString("DragDrop_wrongExt_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exit.
+        /// </summary>
+        internal static string exit {
+            get {
+                return ResourceManager.GetString("exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to close this window ?
+        ///Unsaved progress might be lost !.
+        /// </summary>
+        internal static string exit_msg {
+            get {
+                return ResourceManager.GetString("exit_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failure.
+        /// </summary>
+        internal static string fail {
+            get {
+                return ResourceManager.GetString("fail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot create a document from without specifying a database table !.
+        /// </summary>
+        internal static string ImportTable_noColumns_msg {
+            get {
+                return ResourceManager.GetString("ImportTable_noColumns_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not open selected file !
+        ///Please make sure the selected file is a simple valid XML Document / Excel Sheet..
+        /// </summary>
+        internal static string OpenDoc_fail_msg {
+            get {
+                return ResourceManager.GetString("OpenDoc_fail_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not open selected file !
+        ///Please make sure the selected file is a valid Excel Sheet..
+        /// </summary>
+        internal static string OpenXlsSheet_fail_msg {
+            get {
+                return ResourceManager.GetString("OpenXlsSheet_fail_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to exit all opened windows ?
+        ///Unsaved progress might be lost !.
+        /// </summary>
+        internal static string quit_msg {
+            get {
+                return ResourceManager.GetString("quit_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Couldn&apos;t export to CSV file !.
+        /// </summary>
+        internal static string saveCSV_fail_msg {
+            get {
+                return ResourceManager.GetString("saveCSV_fail_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File successfully saved to.
+        /// </summary>
+        internal static string saveCurrent_success {
+            get {
+                return ResourceManager.GetString("saveCurrent_success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can&apos;t export an empty table !
+        ///Please create a new document using &quot;File &gt; New (Ctrl + N)&quot; or open an existing one !.
+        /// </summary>
+        internal static string saveEmptyTable_fail_msg {
+            get {
+                return ResourceManager.GetString("saveEmptyTable_fail_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Couldn&apos;t save data to {0} !.
+        /// </summary>
+        internal static string saveFile_fail_msg {
+            get {
+                return ResourceManager.GetString("saveFile_fail_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Couldn&apos;t export to Excel Sheet xls file !.
+        /// </summary>
+        internal static string saveXls_fail_msg {
+            get {
+                return ResourceManager.GetString("saveXls_fail_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can&apos;t save while on read only mode !
+        ///Disable read only mode and try again..
+        /// </summary>
+        internal static string saveXml_fail_msg {
+            get {
+                return ResourceManager.GetString("saveXml_fail_msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Success.
+        /// </summary>
+        internal static string success {
+            get {
+                return ResourceManager.GetString("success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XML file (*.xml)|*.xml|Excel xlsx Sheet (*.xlsx)|*.xlsx|Excel xls (97-2003) sheet (*.xls)|*.xls|CSV Excel Sheet (*.csv)|*.csv.
+        /// </summary>
+        internal static string supportedFiles_extension {
+            get {
+                return ResourceManager.GetString("supportedFiles_extension", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XML Documents / Excel Tables|*.xml;*.xlsx;*.xls;*.csv|XML files (*.xml)|*.xml|Excel xlsx Sheets (*.xlsx)|*.xlsx|Excel xls (97-2003) sheets (*.xls)|*.xls|CSV Excel Sheets (*.csv)|*.csv|All files (*.*)|*.*.
+        /// </summary>
+        internal static string supportedfiles_opendialogExtension {
+            get {
+                return ResourceManager.GetString("supportedfiles_opendialogExtension", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UwinOpenDMT -.
+        /// </summary>
+        internal static string title {
+            get {
+                return ResourceManager.GetString("title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [Unsaved - {0}].
+        /// </summary>
+        internal static string Unsaved_new_title {
+            get {
+                return ResourceManager.GetString("Unsaved_new_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warning.
+        /// </summary>
+        internal static string warning {
+            get {
+                return ResourceManager.GetString("warning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Excel xlsx Sheets (*.xlsx)|*.xlsx|Excel xls (97-2003) sheets (*.xls)|*.xls|CSV Excel Sheets (*.csv)|*.csv|All files (*.*)|*.*.
+        /// </summary>
+        internal static string xlsfile_dialogextension {
+            get {
+                return ResourceManager.GetString("xlsfile_dialogextension", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Excel Sheets (*.xlsx)|*.xlsx.
+        /// </summary>
+        internal static string xlsfile_extention {
+            get {
+                return ResourceManager.GetString("xlsfile_extention", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XML files (*.xml)|*.xml|All files (*.*)|*.*.
+        /// </summary>
+        internal static string xmlfile_dialogextension {
+            get {
+                return ResourceManager.GetString("xmlfile_dialogextension", resourceCulture);
             }
         }
     }
